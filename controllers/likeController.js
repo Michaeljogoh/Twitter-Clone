@@ -7,7 +7,7 @@ const likeTweets = async (req , res ) =>{
     }
 
   
-    const unLikeTweets = async (req , res ) =>{
+     const unLikeTweets = async (req , res ) =>{
   const newUnlike =  await Likes.findByIdAndDelete(req.params.id)
       res.status(200).json({newUnlike})
     }
