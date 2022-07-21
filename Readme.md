@@ -1,4 +1,4 @@
- Twitter Clone - Node.js
+## Twitter Clone - Node.js
 
  Node twitter is an effort to rewrite some of Twitter's functionality using modern javascript based toolchain. It was mostly an effort to learn Node.js and trying to reverse engineer some of twitter's feature.
 
