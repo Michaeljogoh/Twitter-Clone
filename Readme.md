@@ -12,10 +12,10 @@ if there is this command, it means its backend is working fine.
 
 
 Running backend
-$ cd backend
-$ npm i
-$ npm start
-$ npm watch #run with nodemon for development
+* cd backend
+* npm i
+* npm start
+* npm watch #run with nodemon for development
 Run npm install on the root folder and it will set up a pre-commit hook to lint the staged files. You will also have two lint commands, npm run lint and npm run lint-staged that you can run on the root folder.
 
 These commands run the individual lint and lint-staged scripts in both the frontend and the backend folders, and they will respect individual configurations of these folders.
