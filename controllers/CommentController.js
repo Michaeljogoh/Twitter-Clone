@@ -4,7 +4,7 @@ const Comment = require('../models/Comment');
 const createComments = async (req , res) =>{
     const { comment } = req.body
     if(!comment){
-        res.status(422).json({error:"Please write a comment"})
+        res.status(204).json({error:"Please write a comment"})
     } 
   const newcomment =  await  Comment.create({comment , tweetId:req.params.id, commentBy : req.user })
     res.status(200).json({newcomment})
@@ -30,9 +30,9 @@ const deleteComment = async (req , res) =>{
   const newDeleteComment = await Comment.findById(req.params.id)
   if(newDeleteComment.postBy._id.toString() === req.user._id.toString()){
     await Comment.findByIdAndDelete(req.params.id)
-    res.status(200).json("Comment Deleted")
+    res.status(200).json({newDeleteComment})
   } else {
-    res.status(403).json("You can only delete your comment")
+    res.status(401).json("You can only delete your comment")
    }
  
   
